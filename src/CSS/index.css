@@ -123,10 +123,53 @@ main {
 }
 
 footer {
-  background-color: #0E409F;
-   
+  background-color: #f3f3f3;
+  height: 300px;
+  /* width: 100vw; */
 }
 
+.footer__general {
+  padding-top: 60px;
+  display: flex;
+  justify-content: space-around;
+}
 
+.footer__about__image__item {
+  width: 180px;
+  height: auto;
+}
+
+.footer__title {
+  text-transform: uppercase;
+  color: var(--primary--color);
+  font-weight: 500;  
+}
+
+.footer__list {
+  margin-top: 20px;
+}
+
+.footer__list__item {
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.footer__list__about--link,
+.footer__list__services--link,
+.footer__list--link {
+  color: var(--font--color);  
+}
+
+.networks {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.fi {
+  font-size: 30px;
+  color: var(--primary--color);
+}
 
 
