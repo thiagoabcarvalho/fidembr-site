@@ -6,6 +6,8 @@
     --secundary--color: #fff; 
     --emphasis--color: #1e7236;
   
+    --additional--blue: #0772B6;
+
     --input--color: #c9c9c5;
   
     /* background */
@@ -19,7 +21,9 @@
     --grid--photo:1fr auto 1fr;    
     
     /* fonte */
-    --font--color: #3c3c3b;
+    --font--primary: #3c3c3b;
+    --font--secundary: #969696;
+
     --size--headline: 4rem;
     --size--subhead: 2.3rem;
     --size--body: 1.8rem;
@@ -35,6 +39,13 @@ html {
 
 input {
   all: unset;
+  caret-color: var(--primary--color);
+}
+
+textarea:focus,
+input:focus {
+  box-shadow: 0 0 0 0;  
+  outline: 0;
 }
 
 .container {  
@@ -65,6 +76,7 @@ input {
 
 .menu__nav {
   width: 590px;
+  margin: 0 128px 0 267px ;
 }
 
 .menu__nav__list {
@@ -72,7 +84,7 @@ input {
   justify-content: space-around;  
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--font--color);
+  color: var(--font--primary);
 
 }
 
@@ -84,7 +96,7 @@ input {
   font-size: 16px;
   padding-left: 15px;
   color: #969696;
-  caret-color: var(--primary--color);
+  
 }
 
 main {  
@@ -117,10 +129,111 @@ main {
   
 }
 
-.contact {
-  background-color: #fd7014;
-   
+/* CONTATO */
+
+.contact .contact__bg {
+  background-image: url(/src/public/images/contact.png);
+  background-size: cover;
+  background-repeat: no-repeat; 
+  position: relative; 
+  width: 1600px; 
+  height: 1000px;
+  opacity: 0.3;   
 }
+
+/* melhorar o position da div */
+.contact__forms {
+  width: 613px;
+  height: 930px;
+  display: flex;
+  position: absolute;
+  top: 720px;
+  left: 260px;  
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0px 8px 8px 0px;
+  background: rgba(243, 243, 243, 0.6);
+  box-shadow: 5px 0px 4px rgba(0, 0, 0, 0.1);  
+}
+
+.contact__forms__title {
+  color: var(--additional--blue);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  text-transform: uppercase;
+  margin: 40px 0;
+}
+
+.contact__forms__input {
+  width: 517px;
+  height: 76px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.input--textarea,
+.input--select {
+  width: 541px;  
+}
+
+.contact__forms__input,
+option {
+  padding-left: 24px;
+  font-size: 20px;
+  color: var(--font--secundary);
+}
+
+.input--textarea {
+  height: 260px;
+  padding-top: 24px;
+}
+
+/* alinhar os itens do checkbox */
+.checkbox__item {
+  width: 25px;
+  height: 25px;  
+  border: 2px solid var(--font--primary);  
+  border-radius: 8px;
+}
+
+.checkbox__title {
+  margin-left: 20px;
+  font-size: 20px;
+  color: var(--font--secundary);
+}
+
+.contact__forms__button {
+  width: 512px;
+  height: 84px;  
+  margin-top: 32px;
+  background-color: transparent;
+  border: 2px solid var(--additional--blue);
+  border-radius: 8px;
+  color: var(--additional--blue);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ENDEREÇO */
+
+.place a {
+  font-size: 28px;
+  color: var(--font--primary);
+  padding-bottom: 20PX;
+}
+
+.place {  
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 1480px;
+  left: 1150px;
+  text-align: right;
+}
+
+/* RODAPÉ */
 
 footer {
   background-color: #f3f3f3;
@@ -157,7 +270,7 @@ footer {
 .footer__list__about--link,
 .footer__list__services--link,
 .footer__list--link {
-  color: var(--font--color);  
+  color: var(--font--primary);  
 }
 
 .networks {

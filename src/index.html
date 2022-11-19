@@ -143,20 +143,29 @@
                 </div>
             </section>
             <section class="contact">
-                <img class="contact__image" src="#" alt="imagem de um atendente com headset">
+                <div class="contact__bg"></div>
                 <div class="contact__forms">
                     <span class="contact__forms__title">entre em contato</span>
-                    <iput class="contact__forms__input input--name" type="text" placeholder="nome"></iput>
-                    <iput class="contact__forms__input input--email" type="email" placeholder="seu melhor e-mail"></iput>
-                    <iput class="contact__forms__input input--select" type="select"></iput>
-                    <iput class="contact__forms__input input--textarea" type="textarea" aria-placeholder="comentários"></iput>
-                    <iput class="contact__forms__input input--checkbox" type="checkbox"></iput><span>concordo com a pokitica de privacidade</span>
-                    <button class="contact__forms__button btn--forms">enviar</button>
+                    <input class="contact__forms__input input--name" type="text" placeholder="nome"></input>
+                    <input class="contact__forms__input input--email" type="email" placeholder="seu melhor e-mail">
+                    <select class="contact__forms__input input--select" type="select">
+                        <option value="#">escolha uma opção</option>
+                        <option value="financeiro">financeiro</option>
+                        <option value="orçamento">orçamento</option>
+                        <option value="rh">RH</option>
+                        <option value="aluno">aluno</option>
+                    </select>
+                    <textarea class="contact__forms__input input--textarea" type="textarea" placeholder="comentários"></textarea>
+                    <div class="checkbox">
+                        <input type="checkbox" class="checkbox__item"  id="policy" name="policy" checked>
+                        <label class="checkbox__title"for="checkbox">concordo com a política de privacidade</label>
+                    </div>                    
+                    <button class="contact__forms__button btn--forms" type = "submit">Enviar</button>                                            
                 </div>
                 <address class="place">                
-                        <a class="place__address place--email" href="mailto:contato@fidembr.com.br">contato@fidembr.com.br</a>
-                        <a class="place__address place--cel" href="tel:+5519981476742">(019) 9.8147-6742</a>
-                        <a class="place__address place--avenue" href="#">Av. Aquidaba, 903 Centro / Campinas-SP</a>                  
+                    <a class="place__address place--cel" href="tel:+5519981476742">(019) 9.8147-6742</a>
+                    <a class="place__address place--email" href="mailto:contato@fidembr.com.br">contato@fidembr.com.br</a>
+                    <a class="place__address place--avenue" href="#">Av. Aquidaba, 903 Centro / Campinas-SP <br> CEP: 13015-210 </a>                  
                 </address>
             </section>
             <footer>
