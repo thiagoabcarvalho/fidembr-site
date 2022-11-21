@@ -1,8 +1,16 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
 <dirinfo>
 <files>
+	<item key='arrow-drop-down.png20221119155231' />
+	<item key='car-fidembr.png20221119235454' />
+	<item key='click.svg20221121153332' />
+	<item key='client-red-eventos.png20221121160019' />
+	<item key='contact.png20221119125938' />
 	<item key='lg_horizontal_fidembr.png20221117210557' />
-	<item key='login.svg20221117210557' />
 	<item key='lg_vertical_fidem.png20221117212347' />
+	<item key='login.png20221119223814' />
+	<item key='nurse.jpg20220807123228' />
+	<item key='search.png20221119222011' />
+	<item key='work.png20221121152420' />
 </files>
 </dirinfo>
