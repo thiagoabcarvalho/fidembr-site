@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&family=Roboto:wght@300;400;900&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+
     <link rel="icon" type="image/svg+xml" href="/src/public/vite.svg" />
     <link rel="stylesheet" href="./CSS/normalize.css">
     <link rel="stylesheet" href="./CSS/index.css">
@@ -59,61 +62,55 @@
             </section>
 
             <section class="products">
+                <h2>conheça nossos serviços</h2>             
+                
                 <div class="products__item">
-                    <img  class="products__item__image img--management" src="#" alt="">
-                    <span class="products__item__title">gestão em saúde</span>
+                    <span class="material-symbols-outlined">manage_accounts</span>
+                    <p class="products__item__title">gestão em saúde</p>
                     <p class="products__item__text"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        Beatae consequatur nisi consectetur asperiores, 
-                        excepturi iusto amet quos repudiandae in a doloremque.</p>
-                        <button class="products__button">mais inf.</button>
-                </div>
-                <div>
-                    <img  class="products__item__image img--emergency" src="#" alt="">
-                    <span class="products__item__title">atendimento emergêncial</span>
+                        Beatae consequatur nisi consectetur asperiores.</p>
+                        <button class="btn-default btn-products">saiba +</button>
+                    </div>
+
+                    <div class="products__item">
+                        <span class="material-symbols-outlined">emergency</span>
+                    <!-- <img  class="products__item__image img--emergency" src="#" alt=""> -->
+                    <p class="products__item__title">atendimento emergêncial</p>
                     <p class="products__item__text"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        Beatae consequatur nisi consectetur asperiores, 
-                        excepturi iusto amet quos repudiandae in a doloremque.</p>
-                    <button class="products__button">mais inf.</button>
-                </div>
-                <div>
-                    <img  class="products__item__image img--transfer" src="#" alt="">
-                    <span class="products__item__title">transferência hospitalar</span>
+                        Beatae consequatur nisi consectetur asperiores.</p>
+                        <button class="btn-default btn-products ">saiba +</button>
+                    </div>
+
+                    <div class="products__item">
+                        <span class="material-symbols-outlined">minor_crash</span>                    
+                    <p class="products__item__title">transferência hospitalar</p>
                     <p class="products__item__text"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        Beatae consequatur nisi consectetur asperiores, 
-                        excepturi iusto amet quos repudiandae in a doloremque.</p>
-                    <button class="products__button">mais inf.</button>
-                </div>
-                <div>
-                    <img  class="products__item__image img--removals" src="#" alt="">
-                    <span class="products__item__title">remoções particulares</span>
+                        Beatae consequatur nisi consectetur asperiores.</p>
+                        <button class="btn-default btn-products ">saiba +</button>
+                    </div>
+                    
+                    <div class="products__item">                        
+                    <span class="material-symbols-outlined">personal_injury</span>
+                    <p class="products__item__title">remoçoes particulares</p>
                     <p class="products__item__text"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        Beatae consequatur nisi consectetur asperiores, 
-                        excepturi iusto amet quos repudiandae in a doloremque.</p>
-                    <button class="products__button">mais inf.</button>
-                </div>
-                <div>
-                    <img  class="products__item__image img--events" src="#" alt="">
-                    <span class="products__item__title">cobertura de eventos</span>
+                        Beatae consequatur nisi consectetur asperiores.</p>
+                        <button class="btn-default btn-products ">saiba +</button>
+                    </div>
+
+                    <div class="products__item">                        
+                        <span class="material-symbols-outlined">festival</span>                    
+                    <p class="products__item__title">cobertura de eventos</p>
                     <p class="products__item__text"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        Beatae consequatur nisi consectetur asperiores, 
-                        excepturi iusto amet quos repudiandae in a doloremque.</p>
-                    <button class="products__button">mais inf.</button>
-                </div>
-                <div>
-                    <img  class="products__item__image img--health" src="#" alt="">
-                    <span class="products__item__title">gestão em saúde</span>
+                        Beatae consequatur nisi consectetur asperiores.</p>
+                        <button class="btn-default btn-products ">saiba +</button>
+                    </div>
+
+                    <div class="products__item">                        
+                        <span class="material-symbols-outlined">local_convenience_store</span>                    
+                    <p class="products__item__title">atendimento 24h</p>
                     <p class="products__item__text"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        Beatae consequatur nisi consectetur asperiores, 
-                        excepturi iusto amet quos repudiandae in a doloremque.</p>
-                    <button class="products__button">mais inf.</button>
-                </div>
-                <div>
-                    <img  class="products__item__image img--attendance" src="#" alt="">
-                    <span>atendimento 24h</span>
-                    <p class="products__item__text"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        Beatae consequatur nisi consectetur asperiores, 
-                        excepturi iusto amet quos repudiandae in a doloremque.</p>
-                    <button>mais inf.</button>
+                        Beatae consequatur nisi consectetur asperiores.</p>
+                    <button class="btn-default btn-products ">saiba +</button>
                 </div>
             </section>
 
@@ -173,6 +170,7 @@
                     <span class="indicator__item"></span>
                 </div>
             </section>
+            
             <section class="contact">
                 <div class="contact__bg"></div>
                 <div class="contact__forms">
