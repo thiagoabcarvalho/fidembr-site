@@ -15,22 +15,24 @@
   </head>
   <body>
         <header class="menu">
-            <h1 class="menu__logo"><a href="#"><img class="menu__logo__item" src="./public/images/lg_horizontal_fidembr.png" alt="logomarca da empresa Fidembr"></a></h1>
-            <nav class="menu__nav">
-                <ul class="menu__nav__list">
-                    <li class="menu__nav__list__item"><a class="menu__nav__list--link" href="">empresa</a></li>
-                    <li class="menu__nav__list__item"><a class="menu__nav__list--link" href="">serviços</a></li>
-                    <li class="menu__nav__list__item"><a class="menu__nav__list--link" href="">clientes</a></li>
-                    <li class="menu__nav__list__item"><a class="menu__nav__list--link" href="">trabalhe conosco</a></li>
-                    <li class="menu__nav__list__item"><a class="menu__nav__list--link" href="">contato</a></li>
-                </ul>
-            </nav>
-            <div class="menu__search">
-                <input class="menu__search--input" type="search" id="#" name="#" placeholder="procurar">                
+            <div class="menu__item">
+                <h1 class="menu__logo"><a href="#"><img class="menu__logo__item" src="./public/images/lg_horizontal_fidembr.png" alt="logomarca da empresa Fidembr"></a></h1>
+                <nav class="menu__nav">
+                    <ul class="menu__nav__list">
+                        <li class="menu__nav__list__item"><a class="menu__nav__list--link" href="">empresa</a></li>
+                        <li class="menu__nav__list__item"><a class="menu__nav__list--link" href="">serviços</a></li>
+                        <li class="menu__nav__list__item"><a class="menu__nav__list--link" href="">clientes</a></li>
+                        <li class="menu__nav__list__item"><a class="menu__nav__list--link" href="">trabalhe conosco</a></li>
+                        <li class="menu__nav__list__item"><a class="menu__nav__list--link" href="">contato</a></li>
+                    </ul>
+                </nav>
+                <div class="menu__search">
+                    <input class="menu__search--input" type="search" id="#" name="#" placeholder="procurar">                
+                </div>
+                <div class="menu__login">
+                    <span class="menu__login__item"></span>
+                </div>        
             </div>
-            <div class="menu__login">
-                <span class="menu__login__item"></span>
-            </div>        
         </header>
 
         <article class="container">
@@ -123,9 +125,7 @@
             <!-- <section class="work">
                 <div class="work__items">
                     <img class="work__item__icon work__item__title" src="/src/public/images/click.svg" alt="icone para entrar">
-                    <span>trabalhe conosco</span>    
-                    
-                                    
+                    <span>trabalhe conosco</span>
                     <span class="work__item">você também!</span>                                
                 </div>                
             </section> -->
@@ -152,7 +152,7 @@
                 <span class="testimonial__title">Depoimento dos nossos alunos</span>
                 <div class="testimonial__item">
                     <img class="testimonial__photo" src="/src/public/images/testemonial-client.png" alt="">
-                    <div class="testemonial__item__text">
+                    <div class="testimonial__item__text">
                         <span class="testimonial__name">João marquês da silvas</span>
                         <p class="testimonial__text">                            
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
@@ -161,7 +161,7 @@
                         </p>
                         <span class="testimonial__description">Aluno APH - Avançado</span>
                     </div>
-                    <div class="testemonial__stars">
+                    <div class="testimonial__stars">
                         <img class="testimonial__star__item" src="/src/public/images/star-full.svg" alt="">
                         <img class="testimonial__star__item" src="/src/public/images/star-full.svg" alt="">
                         <img class="testimonial__star__item" src="/src/public/images/star-full.svg" alt="">
@@ -179,8 +179,8 @@
             </section>
             
             <section class="contact">
-                <div class="contact__bg"></div>
-                <div class="contact__forms">
+                <div ><img class="contact__bg" src="./public/images/contact.png" alt=""></div>
+                <!-- <div class="contact__forms">
                     <span class="contact__forms__title">entre em contato</span>
                     <input class="contact__forms__input input--name" type="text" placeholder="nome"></input>
                     <input class="contact__forms__input input--email" type="email" placeholder="seu melhor e-mail">
@@ -202,7 +202,7 @@
                     <a class="place__address place--cel" href="tel:+5519981476742">(019) 9.8147-6742</a>
                     <a class="place__address place--email" href="mailto:contato@fidembr.com.br">contato@fidembr.com.br</a>
                     <a class="place__address place--avenue" href="#">Av. Aquidaba, 903 Centro / Campinas-SP <br> CEP: 13015-210 </a>                  
-                </address>
+                </address> -->
             </section>
         </article>
 
@@ -248,6 +248,9 @@
                     </div>
                 </div>
         </footer>       
+            <div class="copyright">
+                <p>&copy Todos os direitos reservados a FidemBr - Emergências Médicas e Gestão em Saúde | Desenvolvido por <a  class="copyright__link"  href="https://codigo.cafe">Código Café</a></p> 
+            </div>
 
         <!-- VITE -->
         <div id="app"></div>
