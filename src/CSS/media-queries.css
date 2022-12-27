@@ -1,9 +1,44 @@
+/* NOTEBOOK */
+
 @media screen and (min-width: 1024px){
 
-    
+    .container {  
+        display: grid;  
+        grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+        background-color: aqua;
+    }
+
+      
+    .hero_image__item--ambulance {
+        
+        width: 70%;
+        height: auto;
+        
+    }
+
+
     .bar {
         display: none;
     }
+
+
+    /* produto */
+
+    .list__product {
+        
+        width: 60%;
+        height: auto;
+            
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);  
+        /* grid-template-rows: 150px 250px 250px; */
+      }
+
+    /* contato */
+
+    
+
+   
     
 }
 
@@ -12,12 +47,16 @@
 
 @media screen and (min-width: 720px) and (max-width: 1023px) {
     
+
+    .container {  
+        
+        background-color: red;
+    }
         
 }
 
 /* MOBILE */
 @media screen and (max-width: 720px) {
-
       
        
     .menu__nav {
@@ -36,8 +75,7 @@
     
     
     article {
-    /* background-color: rgba(221, 53, 23, 0.397); */
-    border: 5px solid #000;
+        border: 5px solid #000;
    }
 
 

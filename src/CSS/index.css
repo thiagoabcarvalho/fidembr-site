@@ -23,7 +23,7 @@ input:focus {
   border: 2px solid var(--additional--blue);
   border-radius: 8px;
   color: var(--additional--blue);
-  font-size: 20px;
+  font-size: 1.25rem;
   cursor: pointer;
 }
 
@@ -54,7 +54,8 @@ header {
   grid-column: 2;
   display: flex;
   justify-content: space-between;
-  height: 130px;  
+  height: 130px;
+  padding: 0 30px;  
 }
 
 .menu__logo, 
@@ -83,7 +84,6 @@ header {
   text-transform: uppercase;
   color: var(--font--primary);
   margin-right: 10px;
-  /* background-color: rgba(64, 230, 191, .5); */
 }
 
 .menu__nav__list--link {
@@ -102,6 +102,7 @@ header {
   caret-color: var(--primary--color); /* mudar a cor do cursor*/
 }
 
+/*
 .menu__search--input {
   width: 230px;
   height: 52px;
@@ -112,11 +113,10 @@ header {
   background-position: 5% 50%;
   background-size: 19px;
   background-color: var(--background--tertiary);
-  /* background-color: #fff; */
-
+  
   font-family: 'Nunito', sans-serif;
   text-transform: capitalize;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--font--primary);  
   
   padding-left: 40px;
@@ -136,6 +136,8 @@ header {
   
   cursor: pointer;
 }
+
+*/
 
 /* MENU BURGUER */
 
@@ -208,19 +210,21 @@ header {
   grid-row: 1 / 2;
   margin-top: 50px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;    
 }
 
 .hero__presentation__title {
-  font-size: 104px;
+  font-size: 6.25rem;
   color: var(--additional--blue);
   text-transform: uppercase;
 }
 
 .hero__presentation__text {
-  width: 475px;
+  max-width: 470px;
+  width: 100%;
   height: auto;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--font--primary);
   line-height: 25px;
   margin: 10px 0 30px 0;
@@ -237,8 +241,8 @@ header {
 }
 
 .hero_image__item--ambulance {
-  position: relative;  
-  width: 900px;
+  max-width: 900px;
+  width: 100%;
   height: auto;
 }
 
@@ -272,13 +276,13 @@ header {
 
 .about__title {
   text-transform: uppercase;
-  font-size: 64px;
+  font-size: 4rem;
 }
 
 .about__text {
   width: 800px;
   height: auto;
-  font-size: 28px;
+  font-size: 1.75rem;
   margin: 20px 0 30px 0;
   line-height: 35px;
 }
@@ -306,7 +310,8 @@ header {
 }
 
 .list__product {
-  width: 1340px;
+  max-width: 1340px;
+  width: 100%;
   height: 700px;
 
   margin: auto;
@@ -325,7 +330,7 @@ header {
   text-transform: uppercase;
   color: var(--additional--blue);
   font-weight: 400;
-  font-size: 50px;
+  font-size: 3.125rem;
 }
 
 .products__item {  
@@ -369,7 +374,7 @@ header {
 
 .products__item__title a {
   width: 400px;
-  font-size: 30px;
+  font-size: 1.875rem;
   color: var(--additional--blue);
   text-transform: uppercase;  
 }
@@ -417,7 +422,7 @@ header {
 }
 
 .work span {  
-  font-size: 104px;
+  font-size: 6.25rem;
   font-weight: bolder;
   color: var(--font--primary);
   text-transform: uppercase;
@@ -437,14 +442,14 @@ header {
 
 .client__title {
   color: var(--font--primary);
-  font-size: 30px;  
+  font-size: 1.875rem;  
   justify-content: center;
   text-transform: uppercase;
 }
 
 .client__image {  
   width: 100vw;
-  margin-top: 30px;  
+  margin-top: 1.875rem;  
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
@@ -466,7 +471,7 @@ header {
 
 .testimonial__title {
   color: var(--font--primary);
-  font-size: 30px;    
+  font-size: 1.88rem;    
   text-transform: uppercase;
   margin-bottom: 150px;  
 }
@@ -518,7 +523,7 @@ header {
 }
 
 .testimonial__name {  
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--additional--blue);
   margin-bottom: 20px; 
 }
@@ -533,14 +538,14 @@ header {
 .testimonial__text {
   width: 350px;
   height: auto;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--font--primary);
   text-align: center;
 }
 
 .testimonial__description {
   margin-top: 40px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: italic;
   color: var(--font--primary);
 }
@@ -562,30 +567,35 @@ header {
 .contact {
   grid-column: 2;
   grid-row: 7 / 8;
+  /* display: flex;
+  flex-direction: row; */
 }
 
 .contact__bg {
-  width: 1600px; 
-  height: 1000px;
-  opacity: 0.3;   
+  max-width: 987px;
+  width: 100%; 
+  height: auto;
+  opacity: 0.3; 
+  object-fit: cover; 
+
 }
 
-/* melhorar o position da div */
 .contact__forms {
-  width: 613px;
+  max-width: 613px;
+  width: 100%;
   height: 930px;
   display: flex;
   flex-direction: column;
   align-items: center;  
   border-radius: 0px 8px 8px 0px;
-  border: 2px solid #f3f3f3;
+  border: 2px solid var(--font--primary);
   background: rgba(243, 243, 243, 0.6);
   box-shadow: 5px 0px 4px rgba(0, 0, 0, 0.1);  
 }
 
 .contact__forms__title {
   color: var(--additional--blue);
-  font-size: 40px;
+  font-size: 2.50rem;
   font-weight: 700;
   line-height: 48px;
   text-transform: uppercase;  
@@ -607,7 +617,7 @@ header {
 .contact__forms__input,
 option {
   padding-left: 24px;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--font--secundary);
 }
 
@@ -627,7 +637,7 @@ option {
 
 .checkbox__title {
   margin-left: 20px;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--font--secundary);
 }
 
@@ -639,14 +649,14 @@ option {
   border: 2px solid var(--additional--blue);
   border-radius: 8px;
   color: var(--additional--blue);
-  font-size: 20px;
+  font-size: 1.25rem;
   cursor: pointer;
 }
 
 /* ENDEREÇO */
 
 .place a {
-  font-size: 28px;
+  font-size: 1.74rem;
   color: var(--font--primary);
   padding-bottom: 20PX;
 }
@@ -709,7 +719,7 @@ footer {
 }
 
 .fi {
-  font-size: 30px;
+  font-size: 1.88rem;
   color: var(--primary--color);
 }
 
@@ -717,7 +727,7 @@ footer {
   background-color: #f3f3f3;
   text-align: center;
   color: var(--font--primary);
-  font-size: 12px;
+  font-size: 0.75rem;
   padding: 10px 0 10px 0;
 }
 
