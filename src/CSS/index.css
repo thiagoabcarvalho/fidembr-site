@@ -31,7 +31,7 @@ html {
 .container {
   display: grid;
   grid-template-columns: 1fr minmax(auto, var(--size-container)) 1fr;
-  gap: 50px;
+  gap: 80px;
 }
 
 
@@ -42,6 +42,7 @@ html {
   grid-template-columns: repeat( 2, 1fr );
   gap: 0 50px;
   align-items: center;
+  margin-top: 80px;
 }
 .hero .hero__title {
   font-size: 6.25rem;
@@ -55,6 +56,7 @@ html {
 }
 .hero .hero__image img {
   max-width: 900px;
+  width: 100%;
   height: auto;
   display: block;
 }
@@ -138,13 +140,13 @@ html {
   align-items: center;
 }
 .product .product__image {
-  text-align: center;
+  text-align: center;  
   margin-bottom: .5rem;
 }
 .product .product__image img {
   max-width: 80px;
   width: 100%;
-  height: auto;
+  height: auto;  
 }
 .product .product__text {
   margin-bottom: 1rem;
@@ -298,6 +300,7 @@ header {
 }
 
 .bar {
+  display: none;
   position: relative;
   cursor: pointer;
   width: 50px;
@@ -369,17 +372,28 @@ header {
 
 .work {
   grid-column: 2;
-  grid-row: 5 / 6;
-  margin-top: 100px;
-  width: 1600px;
-  height: 800px;
+  width: 100%;
+  max-width: 1600px;
+  height: auto;
   background-image: url(/src/public/images/work.png);
-  padding: 457px 290px 0 70px;  
+  
+  padding: 457px 290px 0 70px;
 }
 
 .work__item__icon {
+  margin-right: 30px;
   width: 100px;
   height: auto;
+}
+
+.work__items {
+  cursor: pointer;
+
+}
+
+.work__items span:last-child {
+  position: relative;
+  left: 135px;
 }
 
 .work span {  
@@ -392,8 +406,7 @@ header {
 /* CLIENT */
 
 .client {
-  grid-column: 2;
-  grid-row: 5 / 6;  
+  grid-column: 2;    
 }
 
 .client__title,
@@ -408,8 +421,7 @@ header {
   text-transform: uppercase;
 }
 
-.client__image {  
-  width: 100vw;
+.client__image {    
   margin-top: 1.875rem;  
   flex-wrap: wrap;
   justify-content: space-around;
@@ -426,8 +438,6 @@ header {
 
 .testimonial {
   grid-column: 2;
-  grid-row: 6 / 7;    
-  
 }
 
 .testimonial__title {
@@ -438,7 +448,6 @@ header {
 }
 
 .testimonial__item {  
-  width: 100vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -479,7 +488,6 @@ header {
 
   border: 1px solid var(--background--primary);
   box-shadow: 4px 4px 8px 0 rgba(60, 60, 59, 0.3);
-
   object-fit: cover;  
 }
 
@@ -521,35 +529,38 @@ header {
 
 .testimonial__star__item {
   max-width: 36px;
+  width: 100%;
 }
 
 /* CONTATO */
 
 .contact {
   grid-column: 2;
-  grid-row: 7 / 8;
-  /* display: flex;
-  flex-direction: row; */
+  display: grid;
+  grid-template-columns: 1000px 1fr;  
+  align-items: flex-end;
 }
 
 .contact__bg {
-  max-width: 987px;
+  grid-column: 1;
+  max-width: 1000px;
   width: 100%; 
-  height: auto;
-  opacity: 0.3; 
-  object-fit: cover; 
-
+  height: 930px;  
+  opacity: 0.7; 
+  object-fit: cover;   
 }
 
 .contact__forms {
-  max-width: 613px;
+  grid-column: 2;
+  max-width: 600px;
   width: 100%;
   height: 930px;
+
   display: flex;
   flex-direction: column;
-  align-items: center;  
-  border-radius: 0px 8px 8px 0px;
-  border: 2px solid var(--font--primary);
+  align-items: center;
+
+  border-radius: 0px 8px 8px 0px;  
   background: rgba(243, 243, 243, 0.6);
   box-shadow: 5px 0px 4px rgba(0, 0, 0, 0.1);  
 }
@@ -559,7 +570,8 @@ header {
   font-size: 2.50rem;
   font-weight: 700;
   line-height: 48px;
-  text-transform: uppercase;  
+  text-transform: uppercase;
+  margin: 40px 0;  
 }
 
 .contact__forms__input {
@@ -614,31 +626,16 @@ option {
   cursor: pointer;
 }
 
-/* ENDEREÇO */
-
-.place a {
-  font-size: 1.74rem;
-  color: var(--font--primary);
-  padding-bottom: 20PX;
-}
-
-.place {  
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-}
-
 /* RODAPÉ */
 
 footer {  
   background-color: #f3f3f3;
   width: 100vw;
-  height: 300px;
-  margin-top: 50px;  
+  height: auto;
+  margin-top: 80px;  
 }
 
 .footer__general { 
-  width: 100vw; 
   grid-column: 2;  
   margin-top: 60px;
   display: flex;
@@ -684,8 +681,26 @@ footer {
   color: var(--primary--color);
 }
 
-.copyright {
-  background-color: #f3f3f3;
+.footer__inf {
+  margin-top: 40px;
+  grid-column: 2;
+}
+
+.place address {
+  display: flex;
+  flex-direction: column;
+  line-height: 05px;
+  text-align: left;
+  font-style: normal;
+}
+
+.place a {
+  font-size: 1rem;
+  color: var(--font--primary);
+  padding-bottom: 20PX;
+}
+
+.copyright {  
   text-align: center;
   color: var(--font--primary);
   font-size: 0.75rem;
