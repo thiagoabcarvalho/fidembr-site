@@ -1,6 +1,6 @@
 @import "./reset.css";
 @import "./root.css";
-/*@import "./media-queries.css";*/
+@import "./media-queries.css";
 
 body,
 html {
@@ -25,15 +25,13 @@ html {
   color: white;
 }
 
-
-
 /* Site */
 .container {
+  margin: auto;
   display: grid;
   grid-template-columns: 1fr minmax(auto, var(--size-container)) 1fr;
   gap: 80px;
 }
-
 
 /* HERO */
 .hero {
@@ -74,7 +72,7 @@ html {
   display: grid;
   grid-template-columns: minmax(auto, 600px) 1fr;
   align-items: center;
-  background-color: #069999;
+  background-color: var(--tertiary--color);
 }
 .about .about__image img {
   max-width: 600px;
@@ -111,8 +109,7 @@ html {
 /* PRODUCTS */
 .product {
   grid-column: 2;
-  background-color: var(--background--tertiary);
-  border-radius: 20px;
+  background-color: var(--background--tertiary);  
   padding: 4rem 5rem;
 }
 .product .product__title {
@@ -153,8 +150,13 @@ html {
 }
 .btn.btn--product {
   margin: 0 auto;
+  width: 100%;
+  border: none;
 }
 
+.btn.btn--product:hover {
+  background-color: var(--tertiary--color);
+} 
 
 
 
@@ -241,11 +243,36 @@ header {
 .menu__nav__list--link {
   font-family: 'Nunito', sans-serif;  
   color: var(--font--primary);
-  letter-spacing: 1.5px;  
+  letter-spacing: 1.5px;
+  display: block; 
+  position: relative;  
 }
 
-.menu__nav__list--link:hover {
+/* efeito hover */
+
+.menu__nav__list--link:before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--tertiary--color);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .5s;
+}
+
+.menu__nav__list--link:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
   color: var(--additional--blue);
+}
+
+
+.menu a:hover {
+  color: var(--tertiary--color);  
 }
 
 .menu__search--input,
@@ -299,7 +326,7 @@ header {
   visibility: hidden;
 }
 
-.bar {
+.bar {  
   display: none;
   position: relative;
   cursor: pointer;
@@ -375,8 +402,7 @@ header {
   width: 100%;
   max-width: 1600px;
   height: auto;
-  background-image: url(/src/public/images/work.png);
-  
+  background-image: url(/src/public/images/work.png);  
   padding: 457px 290px 0 70px;
 }
 
@@ -388,7 +414,7 @@ header {
 
 .work__items {
   cursor: pointer;
-
+  margin-bottom: 50px;
 }
 
 .work__items span:last-child {
@@ -503,7 +529,6 @@ header {
   bottom: 50px;
 }
 
-
 .testimonial__text {
   width: 350px;
   height: auto;
@@ -559,10 +584,8 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  border-radius: 0px 8px 8px 0px;  
-  background: rgba(243, 243, 243, 0.6);
-  box-shadow: 5px 0px 4px rgba(0, 0, 0, 0.1);  
+   
+  background: rgba(243, 243, 243, 0.6);  
 }
 
 .contact__forms__title {
@@ -600,12 +623,18 @@ option {
   outline: 0;
 }
 
-/* alinhar os itens do checkbox */
+/* CHECKBOX */
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .checkbox__item {
-  width: 25px;
-  height: 25px;  
-  border: 2px solid var(--font--primary);  
-  border-radius: 8px;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
 }
 
 .checkbox__title {
@@ -650,8 +679,8 @@ footer {
 
 .footer__title {
   text-transform: uppercase;
-  color: var(--primary--color);
-  font-weight: 500;  
+  color: var(--primary--color);  
+  letter-spacing: 1px;  
 }
 
 .footer__list {
@@ -678,7 +707,7 @@ footer {
 
 .fi {
   font-size: 1.88rem;
-  color: var(--primary--color);
+  color: var(--tertiary--color);
 }
 
 .footer__inf {

@@ -28,8 +28,7 @@
                     </ul>
                 </nav>
                 <label for="check" class="bar">
-                    <input class="menu__burguer" type="checkbox" name="" id="check">
-    
+                    <input class="menu__burguer" type="checkbox" name="" id="check">    
                     <span class="top"></span>
                     <span class="middle"></span>
                     <span class="bottom"></span>
@@ -44,7 +43,7 @@
                 <div class="hero__wrapper">
                     <h2 class="hero__title">Fidem BR</h2>
                     <p class="hero__text">Emergências Médicas e Gestão em Saúde nasceu da necessidade circunstancial de capacitar pessoas para o atendimento inicial a emergências traumáticas e não traumáticas.</p>
-                    <button class="btn btn--hero">saiba mais</button>
+                    <!-- <button class="btn btn--hero">saiba mais</button> -->
                 </div>
                 <div class="hero__image">
                     <img src="./public/images/car-fidembr.png" alt="ambulância">
@@ -70,51 +69,51 @@
                 <ul class="product__wrapper">
                     <li class="product__item">
                         <div class="product__image">
-                            <img src="/src/public/icon/SVG/gestao-em-saude.svg" alt="">
+                            <img src="/src/public/icon/gestao-em-saude.png" alt="">
                         </div>
                         <h3 class="product__title product__title--item">Gestão em saúde</h3>
                         <p class="product__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae consequatur nisi consectetur asperiores.</p>
-                        <button class="btn btn--product">Ler mais</button>
+                        <button class="btn btn--product">saiba mais</button>
                     </li>
                     <li class="product__item">
                         <div class="product__image">
-                            <img src="/src/public/icon/SVG/atendimento-emergencial.svg" alt="">
+                            <img src="/src/public/icon/atendimento-emergencial.png" alt="">
                         </div>
                         <h3 class="product__title product__title--item">atendimento emergêncial</h3>
                         <p class="product__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae consequatur nisi consectetur asperiores.</p>
-                        <button class="btn btn--product">Ler mais</button>
+                        <button class="btn btn--product">saiba mais</button>
                     </li>
                     <li class="product__item">
                         <div class="product__image">
-                            <img src="/src/public/icon/SVG/transferencia-hospitalar.svg" alt="">
+                            <img src="/src/public/icon/transferencia-hospitalar.png" alt="">
                         </div>
                         <h3 class="product__title product__title--item">transferência hospitalar</h3>
                         <p class="product__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae consequatur nisi consectetur asperiores.</p>
-                        <button class="btn btn--product">Ler mais</button>
+                        <button class="btn btn--product">saiba mais</button>
                     </li>
                     <li class="product__item">
                         <div class="product__image">
-                            <img src="/src/public/icon/SVG/remocoes-particulares.svg" alt="">
+                            <img src="/src/public/icon/remocoes-particulares.png" alt="">
                         </div>
                         <h3 class="product__title product__title--item">remoções particulares</h3>
                         <p class="product__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae consequatur nisi consectetur asperiores.</p>
-                        <button class="btn btn--product">Ler mais</button>
+                        <button class="btn btn--product">saiba mais</button>
                     </li>
                     <li class="product__item">
                         <div class="product__image">
-                            <img src="/src/public/icon/SVG/cobertura-eventos.svg" alt="">
+                            <img src="/src/public/icon/cobertura-eventos.png" alt="">
                         </div>
                         <h3 class="product__title product__title--item">cobertura de eventos</h3>
                         <p class="product__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae consequatur nisi consectetur asperiores.</p>
-                        <button class="btn btn--product">Ler mais</button>
+                        <button class="btn btn--product">saiba mais</button>
                     </li>
                     <li class="product__item">
                         <div class="product__image">
-                            <img src="/src/public/icon/SVG/atendimento-24h.svg" alt="">
+                            <img src="/src/public/icon/atendimento-24h.png" alt="">
                         </div>
                         <h3 class="product__title product__title--item">atendimento 24h</h3>
                         <p class="product__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae consequatur nisi consectetur asperiores.</p>
-                        <button class="btn btn--product">Ler mais</button>
+                        <button class="btn btn--product">saiba mais</button>
                     </li>
                 </ul>
             </section>
@@ -252,11 +251,15 @@
                         <option value="aluno">aluno</option>
                     </select>
                     <textarea class="contact__forms__input input--textarea" type="textarea" placeholder="comentários"></textarea>
+                    
                     <div class="checkbox">
-                        <input type="checkbox" class="checkbox__item"  id="policy" name="policy" checked>
+                        <label class="checkbox__item">
+                            <input type="radio" class="checkbox__item"  id="policy" name="policy" checked>
+                            <div class="chekmark"></div>
+                        </label>                    
                         <span class="checkbox__title" for="checkbox">concordo com a política de privacidade</span>
-                    </div>                    
-                    <button class="contact__forms__button btn--forms" type = "submit">Enviar</button>                                            
+                    </div>
+                        <button class="contact__forms__button btn--forms" type = "submit">Enviar</button>                                            
                 </div>
             </section>
         </article>
