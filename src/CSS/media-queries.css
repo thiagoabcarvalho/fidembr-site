@@ -56,26 +56,32 @@
 }
 
 @media ( max-width: 720px ) {
-    
-
         
-        /* background-color:rgba(0, 245, 245, .5); */
-
+   /* MENU BURGUER */
 
     #list {
-        display: none;
+        display: block;
         position: absolute;
         top: 8.1rem;
         left: 0;
         background-color: #fff;
         text-align: center;
-        width: 100vw; /*aqui que perdeu a linha lateral*/
+        width: 100vw;
+        height: 0;
+
         z-index: 1;
 
         box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.100);
-
         -webkit-box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.100);
         -moz-box-shadow: inset 0px 2px 5px 0px rgba(0,0,0,0.100);
+        
+        /* para esconder o menu c/ animação usando o transition o é 
+        preciso usar o visibility pois com o display: none; ele não 
+        funciona pois o ele está display: block; ele some da tela*/
+        
+        transition: 0.5s;
+        visibility: hidden;
+        overflow-y: hidden; /*para que o conteúdo fique dentro da div*/
     }
 
     #list a {
@@ -104,13 +110,31 @@
         height: 0.125rem;
         background: currentColor; /*essa propriedade herda a cor do elemento pai*/
         margin-top: 0.3215rem;
+        position: relative; /*para funcionar a animação das linhas*/
+        transition: 0.3s; /* para suavizar a animação */
 
     }
 
     #checkbox:checked ~ #list {
-        display: block;
+        visibility: visible; /* para mostrar o elemento que não foi usado o display:block; */
+        height: calc(100vh - 28.125rem);
+        overflow-y: auto; /* para garantir que ira aumentar de acordo com os elementos acrescentado no menu */
+    }
+    
+    /* animação do burguer */
+     
+    #checkbox:checked ~ #label .hamburguer {
+        border-top-color: transparent ;
     }
 
+    #checkbox:checked ~ #label .hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    #checkbox:checked ~ #label .hamburguer::after {
+        transform: rotate(-135deg);
+        top: -0.4375rem;
+    }
 
 
     /* CLIENTES */
