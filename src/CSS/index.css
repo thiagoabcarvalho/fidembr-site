@@ -204,6 +204,10 @@ header {
   -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.100);
 }
 
+.teste {
+  visibility: hidden;
+}
+
 .menu__item {
   grid-column: 2;
   display: flex;
@@ -212,28 +216,27 @@ header {
   padding: 0 30px;  
 }
 
+.nav,
 .menu__logo, 
-.menu__nav,
-.menu__nav__list,
-.menu__search,
-.menu__login,
-.bar {
+.menu__nav__list {
   align-self: center;
 }
 
 .menu__logo__item {  
-  width: 250px;
+  max-width: 250px;
+  width: 100%;
   height: auto;
   margin-left: 10px;   
 }
 
-.menu__nav {  
-  width: 850px;  
-}
+/* .nav {  
+  width: 100%;  
+  max-width: 850px;  
+} */
 
 .menu__nav__list {
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between; 
   text-decoration: none;
   text-transform: uppercase;
   color: var(--font--primary);
@@ -241,6 +244,7 @@ header {
 }
 
 .menu__nav__list--link {
+  margin-left: 2rem;
   font-family: 'Nunito', sans-serif;  
   color: var(--font--primary);
   letter-spacing: 1.5px;
@@ -248,7 +252,7 @@ header {
   position: relative;  
 }
 
-/* efeito hover */
+/* HOVER */
 
 .menu__nav__list--link:before {
   content: '';
@@ -281,119 +285,14 @@ header {
   caret-color: var(--primary--color); /* mudar a cor do cursor*/
 }
 
-/*
-.menu__search--input {
-  width: 230px;
-  height: 52px;
-  border-radius: 50px;
-
-  background-image: url(/src/public/images/search.png);
-  background-repeat: no-repeat;
-  background-position: 5% 50%;
-  background-size: 19px;
-  background-color: var(--background--tertiary);
-  
-  font-family: 'Nunito', sans-serif;
-  text-transform: capitalize;
-  font-size: 1.25rem;
-  color: var(--font--primary);  
-  
-  padding-left: 40px;
-}
-
-.menu__login {
-  width: 50px;
-  height: 50px;
-
-  background-image: url('/src/public/images/login.png');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: 28px;
-  background-color: var(--background--tertiary);
-
-  border-radius: 100%;
-  
-  cursor: pointer;
-}
-
-*/
-
 /* MENU BURGUER */
 
-.menu__burguer[type = "checkbox"] {
-  -webkit-appearance: none;
+header .label-menu,
+header .checkbox {
   display: none;
-  visibility: hidden;
-}
-
-.bar {  
-  display: none;
-  position: relative;
-  cursor: pointer;
-  width: 50px;
-  height: 40px;
-}
-
-.bar span {
-  position: absolute;
-  width: 45px;
-  height: 7px;
-  background: var(--primary--color);
-  border-radius: 100px;
-  display: inline-block;
-  transition: 0.3s ease;
-  left: 0;
-}
-
-.bar span.top {
-  top: 0;
-}
-
-.bar span.middle {
-  top: 17px;
-}
-
-.bar span.bottom {
-  bottom: 0;
-}
-
-.menu__burguer[type]:checked ~ span.top {
-  transform: rotate(45deg);
-  transform-origin: top left;
-  width: 48px;
-  left: 5px;
-}
-
-.menu__burguer[type]:checked ~ span.bottom {
-  transform: rotate(-45deg);
-  transform-origin: top left;
-  width: 48px;
-  bottom: -1px;
-  box-shadow: 0 0 10px #495057;
-}
-
-.menu__burguer[type]:checked ~ span.middle {
-  transform: translateX(-20px);
-  opacity: 0;
-}
-
-.menu__burguer[type]:checked ~ .menu__item {
-  width: 100vw;
-  height: 500px;
-  background-color: #f3f3f3;
 }
 
 
-
-
-.atendimento,
-.remocoes {
-  width: 110px;  
-}
-
-.atendimento {
-  height: 80px;  
-}
 
 /* WORK */
 
@@ -429,6 +328,15 @@ header {
   text-transform: uppercase;
 }
 
+.atendimento,
+.remocoes {
+  width: 110px;  
+}
+
+.atendimento {
+  height: 80px;  
+}
+
 /* CLIENT */
 
 .client {
@@ -436,7 +344,7 @@ header {
 }
 
 .client__title,
-.client__image {
+.client__item {
   display: flex;
 }
 
@@ -447,7 +355,7 @@ header {
   text-transform: uppercase;
 }
 
-.client__image {    
+.client__item {    
   margin-top: 1.875rem;  
   flex-wrap: wrap;
   justify-content: space-around;
@@ -455,7 +363,7 @@ header {
   filter: grayscale(100%);
 }
 
-.client__image img {
+.client__item img {
   width: 300px;
   height: auto;
 }
@@ -476,7 +384,7 @@ header {
 .testimonial__item {  
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .testimonial__item__list:nth-child(2) {
@@ -557,7 +465,7 @@ header {
   width: 100%;
 }
 
-/* CONTATO */
+/* FORMULÁRIO */
 
 .contact {
   grid-column: 2;
@@ -625,7 +533,7 @@ option {
 
 /* CHECKBOX */
 
-.checkbox {
+.checkbox__form {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -702,7 +610,8 @@ footer {
   width: 200px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  gap: 1rem;
+  /* justify-content: space-between; */
 }
 
 .fi {
@@ -715,16 +624,17 @@ footer {
   grid-column: 2;
 }
 
+/* CONTATO */
+
 .place address {
-  display: flex;
-  flex-direction: column;
-  line-height: 05px;
-  text-align: left;
+  display: flex;  
+  flex-direction: column;  
   font-style: normal;
+  line-height: .1rem;
 }
 
 .place a {
-  font-size: 1rem;
+  font-size: .8rem;
   color: var(--font--primary);
   padding-bottom: 20PX;
 }

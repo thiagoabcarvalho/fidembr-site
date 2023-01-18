@@ -18,27 +18,25 @@
         <header class="menu">            
             <div class="menu__item">
                 <h1 class="menu__logo"><a href="#"><img class="menu__logo__item" src="./public/images/lg_horizontal_fidembr.png" alt="logomarca da empresa Fidembr"></a></h1>
-                <nav class="menu__nav">
-                    <ul class="menu__nav__list">
+                <nav id="nav" class="nav">
+
+                    <input type="checkbox" id="checkbox" class="checkbox" />
+                    <label for="checkbox" class="label-menu" id="label">Menu
+                        <span class="hamburguer"></span>
+                    </label>
+
+                    <ul class="menu__nav__list" id="list">
                         <li class="menu__nav__list__item"><a class="menu__nav__list--link" href="#">empresa</a></li>
                         <li class="menu__nav__list__item"><a class="menu__nav__list--link" href="#">serviços</a></li>
                         <li class="menu__nav__list__item"><a class="menu__nav__list--link" href="#">clientes</a></li>
                         <li class="menu__nav__list__item"><a class="menu__nav__list--link" href="#">trabalhe conosco</a></li>
                         <li class="menu__nav__list__item"><a class="menu__nav__list--link" href="#">contato</a></li>
-                    </ul>
+                    </ul>                              
                 </nav>
-                <label for="check" class="bar">
-                    <input class="menu__burguer" type="checkbox" name="" id="check">    
-                    <span class="top"></span>
-                    <span class="middle"></span>
-                    <span class="bottom"></span>
-                </label>
             </div>
         </header>
 
-
         <article class="container">
-
             <section class="hero">
                 <div class="hero__wrapper">
                     <h2 class="hero__title">Fidem BR</h2>
@@ -48,8 +46,7 @@
                 <div class="hero__image">
                     <img src="./public/images/car-fidembr.png" alt="ambulância">
                 </div>
-            </section>              
-
+            </section>
 
             <section class="about">
                 <div class="about__image">
@@ -62,7 +59,6 @@
                     <button class="btn btn--about">saiba mais</button>
                 </div>
             </section>
-
 
             <section class="product">
                 <h2 class="product__title">Conheça nossos serviços</h2>
@@ -120,7 +116,7 @@
             
             <section class="client">
                 <span class="client__title">Conheça alguns dos nossos clientes</span>
-                <div class="client__image">
+                <div class="client__item">
                     <a href="https://municipio.jaguariuna.sp.gov.br" class="client__image__item">
                         <img src="/src/public/images/client-pref-jaguariuna.png" alt="logo prefeitura de jaguariúna">
                     </a>
@@ -142,8 +138,7 @@
                     <span>trabalhe conosco</span>
                     <span class="work__item">você também!</span>                                
                 </div>                
-            </section>
-            
+            </section>            
 
             <section class="testimonial">                
                 <span class="testimonial__title">Depoimento dos nossos alunos</span>
@@ -252,9 +247,9 @@
                     </select>
                     <textarea class="contact__forms__input input--textarea" type="textarea" placeholder="comentários"></textarea>
                     
-                    <div class="checkbox">
+                    <div class="checkbox__form">
                         <label class="checkbox__item">
-                            <input type="radio" class="checkbox__item"  id="policy" name="policy" checked>
+                            <input type="checkbox" class="checkbox__item"  id="policy" name="policy" checked>
                             <div class="chekmark"></div>
                         </label>                    
                         <span class="checkbox__title" for="checkbox">concordo com a política de privacidade</span>
@@ -301,8 +296,7 @@
                         <ul class="footer__list networks">
                             <li class="footer__list__item"><a class="footer__list__networks--link" href="#"><i class="fi fi-brands-instagram"></i></a></li>
                             <li class="footer__list__item"><a class="footer__list__networks--link" href="#"><i class="fi fi-brands-linkedin"></i></a></li>
-                            <li class="footer__list__item"><a class="footer__list__networks--link" href="#"><i class="fi fi-brands-facebook"></i></a></li>
-                            <li class="footer__list__item"><a class="footer__list__networks--link" href="#"><i class="fi fi-brands-twitter"></i></a></li>
+                            <li class="footer__list__item"><a class="footer__list__networks--link" href="#"><i class="fi fi-brands-facebook"></i></a></li>                            
                         </ul>
                     </div>
             </div>
@@ -312,7 +306,7 @@
                     <address>                
                         <a class="place__address place--cel" href="tel:+5519981476742">(019) 9.8147-6742</a>
                         <a class="place__address place--email" href="mailto:contato@fidembr.com.br">contato@fidembr.com.br</a>
-                        <a class="place__address place--avenue" href="#">Av. Aquidaba, 903 Centro / Campinas-SP</a>                  
+                        <a class="place__address place--avenue" href="#">av. aquidaba, 903 centro / campinas-sp</a>                  
                     </address>
                 </div>
                 <div class="copyright">
